@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A546615C273DC87F00858151 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A546615B273DC87F00858151 /* ImagePicker.swift */; };
 		A5C1996E2735F2D600EC3532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1996D2735F2D600EC3532 /* AppDelegate.swift */; };
 		A5C199702735F2D600EC3532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1996F2735F2D600EC3532 /* SceneDelegate.swift */; };
 		A5C199722735F2D600EC3532 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C199712735F2D600EC3532 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A546615B273DC87F00858151 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A5C1996A2735F2D600EC3532 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C1996D2735F2D600EC3532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C1996F2735F2D600EC3532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				A5C1996D2735F2D600EC3532 /* AppDelegate.swift */,
 				A5C1996F2735F2D600EC3532 /* SceneDelegate.swift */,
 				A5C199712735F2D600EC3532 /* ContentView.swift */,
+				A546615B273DC87F00858151 /* ImagePicker.swift */,
 				A5C199732735F2D800EC3532 /* Assets.xcassets */,
 				A5C199782735F2D800EC3532 /* LaunchScreen.storyboard */,
 				A5C1997B2735F2D800EC3532 /* Info.plist */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C1996E2735F2D600EC3532 /* AppDelegate.swift in Sources */,
+				A546615C273DC87F00858151 /* ImagePicker.swift in Sources */,
 				A5C199702735F2D600EC3532 /* SceneDelegate.swift in Sources */,
 				A5C199722735F2D600EC3532 /* ContentView.swift in Sources */,
 			);
