@@ -6,26 +6,38 @@
 //
 
 import SwiftUI
+import CoreImage
+import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
-    @State private var showingActionSheet = false
-    @State private var backgroundColor = Color.white
+    @State private var image: Image?
 
     var body: some View {
-        Text("Hello, World!")
-            .actionSheet(isPresented: $showingActionSheet) {
-                ActionSheet(title: Text("Change background"), message: Text("Select a new color"), buttons: [
-                                .default(Text("Red")) {self.backgroundColor = .red},
-                                .default(Text("Green")) {self.backgroundColor = .green},
-                                .default(Text("Blue")) {self.backgroundColor = .blue},
-                                .cancel()])
-            }
-            .frame(width: 300, height: 300)
-            .background(backgroundColor)
-            .onTapGesture {
-                self.showingActionSheet = true
-            }
+        VStack {
+            image?
+                .resizable()
+                .scaledToFit()
+        }
+        .onAppear(perform: loadImage)
     }
+    
+    func loadImage()
+    {
+        guard let inputImage = UIImage(named: "Fantasy") else { return }
+        let beginImage = CIImage(image: inputImage)
+        let context = CIContext()
+        let currentFilter = CIFilter.crystallize()
+        currentFilter.inputImage = beginImage
+        currentFilter.radius = 1
+        
+        guard let outputImage = currentFilter.outputImage else { return }
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            let uiImage = UIImage(cgImage: cgimg)
+            
+            image = Image(uiImage: uiImage)
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
